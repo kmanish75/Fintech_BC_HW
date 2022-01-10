@@ -1,0 +1,87 @@
+
+GITBASH 2 -Step 2
+
+
+kmani@MANAN-VAT MINGW64 /c/Fintech_Bootcamp/Fintech_HW_Submission/18-Blockchain-HW
+$ ./puppeth
++-----------------------------------------------------------+
+| Welcome to puppeth, your Ethereum private network manager |
+|                                                           |
+| This tool lets you create a new Ethereum network down to  |
+| the genesis block, bootnodes, miners and ethstats servers |
+| without the hassle that it would normally entail.         |
+|                                                           |
+| Puppeth uses SSH to dial in to remote servers, and builds |
+| its network components out of Docker containers using the |
+| docker-compose toolset.                                   |
++-----------------------------------------------------------+
+
+Please specify a network name to administer (no spaces, hyphens or capital letters please)
+> fintech_hw
+
+Sweet, you can set this via --network=fintech_hw next time!
+
+←[32mINFO ←[0m[01-09|19:29:05.867] Administering Ethereum network           ←[32mname←[0m=fintech_hw
+←[33mWARN ←[0m[01-09|19:29:05.868] No previous configurations found         ←[33mpath←[0m=C:\\Users\\kmani\\.puppeth\\fintech_hw
+
+What would you like to do? (default = stats)
+ 1. Show network stats
+ 2. Configure new genesis
+ 3. Track new remote server
+ 4. Deploy network components
+> 2
+
+What would you like to do? (default = create)
+ 1. Create new genesis from scratch
+ 2. Import already existing genesis
+> 1
+
+Which consensus engine to use? (default = clique)
+ 1. Ethash - proof-of-work
+ 2. Clique - proof-of-authority
+> 2
+
+How many seconds should blocks take? (default = 15)
+> 15
+
+Which accounts are allowed to seal? (mandatory at least one)
+> 0x9E30fD390843cdAf7F7a649588Da85424AF4f394
+> 0x
+
+Which accounts should be pre-funded? (advisable at least one)
+> 0x429B00e46FFFf82BDE19ff24Ed2f69B6566B74f1
+> 0x
+
+Should the precompile-addresses (0x1 .. 0xff) be pre-funded with 1 wei? (advisable yes)
+> yes
+
+Specify your chain/network ID if you want an explicit one (default = random)
+> 665
+←[32mINFO ←[0m[01-09|19:32:51.978] Configured new genesis block
+
+What would you like to do? (default = stats)
+ 1. Show network stats
+ 2. Manage existing genesis
+ 3. Track new remote server
+ 4. Deploy network components
+> 2
+
+ 1. Modify existing configurations
+ 2. Export genesis configurations
+ 3. Remove genesis configuration
+> 2
+
+Which folder to save the genesis specs into? (default = current)
+  Will create fintech_hw.json, fintech_hw-aleth.json, fintech_hw-harmony.json, fintech_hw-parity.json
+>
+←[32mINFO ←[0m[01-09|19:33:22.043] Saved native genesis chain spec          ←[32mpath←[0m=fintech_hw.json
+←[31mERROR←[0m[01-09|19:33:22.043] Failed to create Aleth chain spec        ←[31merr←[0m="unsupported consensus engine"
+←[31mERROR←[0m[01-09|19:33:22.044] Failed to create Parity chain spec       ←[31merr←[0m="unsupported consensus engine"
+←[32mINFO ←[0m[01-09|19:33:22.046] Saved genesis chain spec                 ←[32mclient←[0m=harmony ←[32mpath←[0m=fintech_hw-harmony.json
+
+What would you like to do? (default = stats)
+ 1. Show network stats
+ 2. Manage existing genesis
+ 3. Track new remote server
+ 4. Deploy network components
+>
